@@ -9,13 +9,25 @@
             "value": "wsuser"
         },
         "administratorLoginPassword": {
-            "value": "Solliance123"
+            "value": "GET-AZUSER-PASSWORD"
         },
         "vmSize": {
             "value": "Standard_E2s_v3"
         },
         "dnsPrefix": {
             "value": "" 
-        }
+        },
+          "azureUsername": {
+            "value": "GET-AZUSER-UPN"
+          },
+          "azurePassword": {
+            "value": "GET-AZUSER-PASSWORD"
+          },
+          "odlId": {
+            "value": "GET-ODL-ID"
+          },
+          "deploymentId": {
+            "value": "GET-DEPLOYMENT-ID"
+          }
     }
 }

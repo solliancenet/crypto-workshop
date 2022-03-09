@@ -9,6 +9,18 @@
           "description": "Suffix added to all resource name to make them unique."
         }
       },
+      "azureUsername": {
+        "type": "string"
+      },
+      "azurePassword": {
+        "type": "securestring"
+      },
+      "odlId": {
+        "type": "string"
+      },
+      "deploymentId": {
+        "type": "string"
+      },
       "administratorLogin": {
         "type": "String",
         "defaultValue": "wsuser",
