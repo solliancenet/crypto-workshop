@@ -15,7 +15,7 @@
             "value": "Standard_E2s_v3"
         },
         "dnsPrefix": {
-            "value": "" 
+            "value": "[uniqueString(resourceGroup().id)]" 
         },
           "azureUsername": {
             "value": "GET-AZUSER-UPN"

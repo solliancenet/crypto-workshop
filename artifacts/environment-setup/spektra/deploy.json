@@ -41,7 +41,7 @@
       }
     },
     "variables": {
-      "resourceName": "[concat('crypto',substring(parameters('uniqueSuffix'),0,4))]",
+      "resourceName": "[concat('crypto',substring(parameters('uniqueSuffix'),0,6))]",
       "domainJoinOptions": 3,
       "ouPath": "",
       "postInstallParameters": "[concat(' -azureTenantID ', variables('azureTenantID'), ' -azureSubscriptionID ', variables('azureSubscriptionID'))]",
