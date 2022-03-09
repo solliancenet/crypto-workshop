@@ -41,7 +41,7 @@
       }
     },
     "variables": {
-        "resourceName": "[concat('mysqldev',substring(parameters('uniqueSuffix'),0,8))]",
+      "resourceName": "[concat('crypto',substring(parameters('uniqueSuffix'),0,4))]",
       "domainJoinOptions": 3,
       "ouPath": "",
       "postInstallParameters": "[concat(' -azureTenantID ', variables('azureTenantID'), ' -azureSubscriptionID ', variables('azureSubscriptionID'))]",
