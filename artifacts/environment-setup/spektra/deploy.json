@@ -2,13 +2,6 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-      "uniqueSuffix": {
-        "type": "String",
-        "defaultValue" : "[uniqueString(resourceGroup().id)]",
-        "metadata": {
-          "description": "Suffix added to all resource name to make them unique."
-        }
-      },
       "azureUsername": {
         "type": "string"
       },
@@ -31,17 +24,12 @@
         "defaultValue": "Solliance123",
         "metadata": { "description": "" }
       },
-      "vmSize": { "defaultValue": "Standard_E2s_v3", "type": "string" },
-      "dnsPrefix": {
-        "type": "string",
-        "metadata": {
-          "description": "The DNS prefix for the public IP address used by the Load Balancer"
-        },
-        "defaultValue": "[concat('ad', parameters('uniqueSuffix'))]"
-      }
+      "vmSize": { "defaultValue": "Standard_E2s_v3", "type": "string" }
     },
     "variables": {
-      "resourceName": "[concat('crypto',substring(parameters('uniqueSuffix'),0,6))]",
+      "dnsPrefix": "[uniqueString(resourceGroup().id)]",
+      "uniqueSuffix": "[uniqueString(resourceGroup().id)]",
+      "resourceName": "[concat('mysqldev',substring(variables('uniqueSuffix'),0,8))]",
       "domainJoinOptions": 3,
       "ouPath": "",
       "postInstallParameters": "[concat(' -azureTenantID ', variables('azureTenantID'), ' -azureSubscriptionID ', variables('azureSubscriptionID'))]",
@@ -1049,7 +1037,7 @@
         "location": "[variables('location')]",
         "properties": {
           "publicIPAllocationMethod": "Dynamic",
-          "dnsSettings": { "domainNameLabel": "[parameters('dnsPrefix')]" }
+          "dnsSettings": { "domainNameLabel": "[variables('dnsPrefix')]" }
         }
       },
       {
