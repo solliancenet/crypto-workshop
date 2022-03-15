@@ -32,25 +32,6 @@ function ConfigurePhp($iniPath)
     set-content $iniPath $content;
 }
 
-function AddPhpApplication($path, $port)
-{
-  #create an IIS web site on the path and port
-  New-IISSite -Name "ContosoStore" -BindingInformation "*:$($port):" -PhysicalPath "$path\Public"
-
-  #add IIS permissions
-  $ACL = Get-ACL -Path "$path\storage";
-  $AccessRule = New-Object System.Security.AccessControl.FileSystemAccessRule("IUSR","FullControl","Allow");
-  $ACL.SetAccessRule($AccessRule);
-  $ACL | Set-Acl -Path "$path\storage";
-
-  $ACL = Get-ACL -Path "$path\bootstrap\cache";
-  $AccessRule = New-Object System.Security.AccessControl.FileSystemAccessRule("IUSR","FullControl","Allow");
-  $ACL.SetAccessRule($AccessRule);
-  $ACL | Set-Acl -Path "$path\bootstrap\cache";
-
-  iisreset /restart 
-}
-
 Start-Transcript -Path C:\WindowsAzure\Logs\CloudLabsCustomScriptExtension.txt -Append
 
 [Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls
@@ -91,35 +72,20 @@ InstallGit
         
 InstallAzureCli
 
-InstallIIs
-
-InstallWebPI
-
-InstallWebPIPhp
-
-$version = "8.0.8"
-InstallPhp $version;
-
-InstallMySql
-
-#install composer globally
-choco install composer
-
 choco install openssl
 
-$version = "8.0.26";
-InstallMySQLWorkbench $version;
-
-$extensions = @("ms-vscode-deploy-azure.azure-deploy");
+$extensions = @("ms-vscode-deploy-azure.azure-deploy", "ms-azuretools.vscode-docker", "ms-python.python", "ms-azuretools.vscode-azurefunctions");
 
 InstallVisualStudioCode $extensions;
 
-Install7Zip;
+InstallVisualStudio "community"
+
+InstallFiddler
 
 #to add the user to docker group
 $global:localusername = "wsuser";
 
-InstallDockerDesktop
+InstallDockerDesktop $global:localusername
 
 Uninstall-AzureRm -ea SilentlyContinue
 
@@ -128,21 +94,11 @@ $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine")
 cd "c:\labfiles";
 
 $branchName = "main";
-$workshopName = "microsoft-mysql-developer-guide";
+$workshopName = "crypto-workshop";
 $repoUrl = "solliancenet/$workshopName";
 
 #download the git repo...
 Write-Host "Download Git repo." -ForegroundColor Green -Verbose
 git clone https://github.com/solliancenet/$workshopName.git $workshopName
-
-ConfigurePhp "c:\tools\php80\php.ini";
-
-$path = "C:\labfiles\$workshopName\sample-php-app";
-$port = "8080";
-AddPhpApplication $path $port;
-
-#run composer on app path
-cd "$path";
-composer install;
 
 Stop-Transcript

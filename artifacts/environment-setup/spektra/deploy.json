@@ -876,7 +876,7 @@
         "location": "[variables('location')]",
         "dependsOn": [
           "[concat('Microsoft.Network/virtualNetworks/', concat(variables('resourceName'), '-hub'))]",
-          "[concat('Microsoft.Network/networkSecurityGroups/', concat(variables('resourceName'), '-paw-1-nsg'))]",
+          "[concat('Microsoft.Network/networkSecurityGroups/', concat(variables('resourceName'), '-win10-nsg'))]",
           "[concat('Microsoft.Network/publicIpAddresses/', concat(variables('resourceName'), '-win10-pip'))]"
         ],
         "properties": {
@@ -895,7 +895,7 @@
             }
           ],
           "networkSecurityGroup": {
-            "id": "[resourceId(resourceGroup().name, 'Microsoft.Network/networkSecurityGroups', concat(variables('resourceName'), '-paw-1-nsg'))]"
+            "id": "[resourceId(resourceGroup().name, 'Microsoft.Network/networkSecurityGroups', concat(variables('resourceName'), '-win10-nsg'))]"
           },
           "dnsSettings": {}
         }
@@ -988,7 +988,7 @@
         "location": "[variables('location')]",
         "dependsOn": [
           "[concat('Microsoft.Network/virtualNetworks/', concat(variables('resourceName'), '-hub'))]",
-          "[concat('Microsoft.Network/networkSecurityGroups/', concat(variables('resourceName'), '-paw-1-nsg'))]"
+          "[concat('Microsoft.Network/networkSecurityGroups/', concat(variables('resourceName'), '-win10-nsg'))]"
         ],
         "properties": {
           "ipConfigurations": [
@@ -1003,113 +1003,9 @@
             }
           ],
           "networkSecurityGroup": {
-            "id": "[resourceId(resourceGroup().name, 'Microsoft.Network/networkSecurityGroups', concat(variables('resourceName'), '-paw-1-nsg'))]"
+            "id": "[resourceId(resourceGroup().name, 'Microsoft.Network/networkSecurityGroups', concat(variables('resourceName'), '-win10-nsg'))]"
           },
           "dnsSettings": {}
-        }
-      },
-      {
-        "name": "[concat(variables('resourceName'),'-paw-1')]",
-        "type": "Microsoft.Compute/virtualMachines",
-        "apiVersion": "2021-04-01",
-        "location": "[variables('location')]",
-        "dependsOn": [
-          "[concat('Microsoft.Network/networkInterfaces/', variables('resourceName'),'-paw-1-nic')]",
-          "[concat('Microsoft.Storage/storageAccounts/', variables('resourceName'))]"
-        ],
-        "properties": {
-          "osProfile": {
-            "computerName": "paw-1",
-            "adminUsername": "[parameters('administratorLogin')]",
-            "adminPassword": "[parameters('administratorLoginPassword')]",
-            "windowsConfiguration": { "provisionVmAgent": "true" }
-          },
-          "hardwareProfile": { "vmSize": "[parameters('vmSize')]" },
-          "storageProfile": {
-            "imageReference": {
-                "publisher": "MicrosoftWindowsServer",
-                "offer": "WindowsServer",
-                "sku": "2019-datacenter-gensecond",
-                "version": "latest"
-            },
-            "osDisk": {
-              "name": "[concat(variables('resourceName'),'-paw-1-os')]",
-              "createOption": "FromImage",
-              "managedDisk": { "storageAccountType": "Standard_LRS" }
-            },
-            "dataDisks": []
-          },
-          "networkProfile": {
-            "networkInterfaces": [
-              {
-                "id": "[resourceId('Microsoft.Network/networkInterfaces', concat(variables('resourceName'), '-paw-1-nic'))]"
-              }
-            ]
-          },
-          "diagnosticsProfile": {
-            "bootDiagnostics": {
-              "enabled": true,
-              "storageUri": "[reference(resourceId(resourceGroup().name, 'Microsoft.Storage/storageAccounts', variables('resourceName')), '2015-06-15').primaryEndpoints['blob']]"
-            }
-          }
-        },
-        "resources": [
-          {
-            "type": "Microsoft.Compute/virtualMachines/extensions",
-            "name": "[concat(variables('resourceName'),'-paw-1','/', 'winExtension')]",
-            "apiVersion": "2015-06-15",
-            "location": "[resourceGroup().location]",
-            "comments": "Script",
-            "tags": { "displayName": "VM Extension" },
-            "dependsOn": [
-              "[concat('Microsoft.Compute/virtualMachines/', concat(variables('resourceName'),'-paw-1'))]"
-            ],
-            "properties": {
-              "publisher": "Microsoft.Compute",
-              "type": "CustomScriptExtension",
-              "typeHandlerVersion": "1.8",
-              "autoUpgradeMinorVersion": true,
-              "settings": {
-                "fileUris": [
-                  "https://raw.githubusercontent.com/solliancenet/microsoft-mysql-developer-guide/main/Artifacts/post-install-script01.ps1"
-                ]
-              },
-              "protectedSettings": {
-                "commandToExecute": "[concat('powershell.exe -ExecutionPolicy Unrestricted -File post-install-script01.ps1', variables('postInstallParameters'))]"
-              }
-            }
-          }
-        ]
-      },
-      {
-        "name": "[concat(variables('resourceName'),'-paw-1-nic')]",
-        "type": "Microsoft.Network/networkInterfaces",
-        "apiVersion": "2021-02-01",
-        "location": "[variables('location')]",
-        "dependsOn": [
-          "[concat('Microsoft.Network/publicIpAddresses/', concat(variables('resourceName'), '-paw-1-pip'))]",
-          "[concat('Microsoft.Network/virtualNetworks/', concat(variables('resourceName'), '-hub'))]",
-          "[concat('Microsoft.Network/networkSecurityGroups/', concat(variables('resourceName'), '-paw-1-nsg'))]"
-        ],
-        "properties": {
-          "ipConfigurations": [
-            {
-              "name": "ipconfig1",
-              "properties": {
-                "subnet": {
-                  "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', concat(variables('resourceName'), '-hub'), 'default')]"
-                },
-                "privateIPAllocationMethod": "Dynamic",
-                "publicIpAddress": {
-                  "id": "[resourceId(resourceGroup().name,'Microsoft.Network/publicIpAddresses', concat(variables('resourceName'), '-paw-1-pip'))]"
-                }
-              }
-            }
-          ],
-          "networkSecurityGroup": {
-            "id": "[resourceId(resourceGroup().name, 'Microsoft.Network/networkSecurityGroups', concat(variables('resourceName'), '-paw-1-nsg'))]"
-          },
-          "dnsSettings": { "dnsServers": [] }
         }
       },
       {
@@ -1123,18 +1019,8 @@
         }
       },
       {
-        "name": "[concat(variables('resourceName'),'-paw-1-pip')]",
-        "type": "Microsoft.Network/publicIPAddresses",
-        "apiVersion": "2021-02-01",
-        "location": "[variables('location')]",
-        "properties": {
-          "publicIPAddressVersion": "IPv4",
-          "publicIPAllocationMethod": "Dynamic"
-        }
-      },
-      {
         "type": "Microsoft.Network/networkSecurityGroups",
-        "name": "[concat(variables('resourceName'),'-paw-1-nsg')]",
+        "name": "[concat(variables('resourceName'),'-win10-nsg')]",
         "apiVersion": "2021-02-01",
         "location": "[variables('location')]",
         "properties": {
