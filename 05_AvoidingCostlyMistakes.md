@@ -6,7 +6,7 @@ TODO
 
 TODO
 
-## Exercise 2: Auditing 
+## Exercise 2: Auditing
 
 Certik
 
