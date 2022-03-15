@@ -1,4 +1,21 @@
 #Disable-InternetExplorerESC
+
+function InstallCryptoTools()
+{
+  npm install -g yarn
+  npm install -g lerna
+  npm install --save-dev hardhat
+  npm install --save-dev typechain
+  npm install --save-dev ethers
+  npm install --save-dev ethereum-waffle
+  npm install --save-dev solhint
+  npm install --save-dev prettier prettier-plugin-solidity
+  npm install --save-dev solidity-coverage
+  npm install -g truffle
+  npm install @openzeppelin/contracts
+
+}
+
 function DisableInternetExplorerESC
 {
   $AdminKey = "HKLM:\SOFTWARE\Microsoft\Active Setup\Installed Components\{A509B1A7-37EF-4b3f-8CFC-4F3A74704073}"
@@ -72,15 +89,26 @@ InstallGit
         
 InstallAzureCli
 
+InstallNodeJS
+
 choco install openssl
 
-$extensions = @("ms-vscode-deploy-azure.azure-deploy", "ms-azuretools.vscode-docker", "ms-python.python", "ms-azuretools.vscode-azurefunctions");
+$extensions = @(
+  "ms-vscode-deploy-azure.azure-deploy", 
+  "ms-azuretools.vscode-docker", 
+  "ms-python.python", 
+  "ms-azuretools.vscode-azurefunctions", 
+  "eg2.vscode-npm-script",
+  "kodebox.solidity-language-server",
+  "JuanBlanco.solidity");
 
 InstallVisualStudioCode $extensions;
 
 InstallVisualStudio "community"
 
 InstallFiddler
+
+InstallGanache
 
 #to add the user to docker group
 $global:localusername = "wsuser";
@@ -98,7 +126,10 @@ $workshopName = "crypto-workshop";
 $repoUrl = "solliancenet/$workshopName";
 
 #download the git repo...
-Write-Host "Download Git repo." -ForegroundColor Green -Verbose
+Write-Host "Download Git repos." -ForegroundColor Green -Verbose
+
 git clone https://github.com/solliancenet/$workshopName.git $workshopName
+
+git clone https://github.com/paulrberg/solidity-template
 
 Stop-Transcript
