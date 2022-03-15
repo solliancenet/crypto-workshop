@@ -53,7 +53,7 @@
         "westus": { "region": "West US" },
         "NorthCentralUS": { "region": "NorthCentralUS" }
       },
-      "vmName": "[concat('labvm-',parameters('uniqueSuffix'))]",
+      "vmName": "[concat('labvm-',variables('uniqueSuffix'))]",
       "storageAccountType": "Premium_LRS",
       "imagePublisher": "MicrosoftWindowsServer",
       "imageOffer": "WindowsServer",
@@ -79,7 +79,7 @@
         "name": "default",
         "dependsOn": [],
         "properties": {
-          "tags": { "DeploymentId": "[parameters('uniqueSuffix')]" }
+          "tags": { "DeploymentId": "[variables('uniqueSuffix')]" }
         }
       },
       {
