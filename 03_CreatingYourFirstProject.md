@@ -1,6 +1,6 @@
-# 02 / Creating your first project
+# 03 / Creating your first project
 
-Creating a cryptocurrency is a relatively easy thing to do.  Here we will explore the steps necessry to do just that.
+Creating a coin and\or token is a relatively easy thing to do.  Here we will explore the steps necessry to do just that.
 
 ## Exercise 1: Starting from scratch - Decisions, decisions
 
@@ -8,6 +8,7 @@ If building a blockchain from scratch, you will need to make some decisions arou
 
 - Consensus mechanism (proof of work or proof of stake)
 - Blockchain architecture (nodes, private/public, permissioned or permissionless)
+- Tokenomics (supply, distribution, initial pricing)
 - Code Security (how to avoid fraud and theft)
 - Legal Compliance
 - How many coins to mint

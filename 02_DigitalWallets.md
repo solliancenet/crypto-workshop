@@ -1,4 +1,4 @@
-# 04 / Digital Wallets
+# 02 / Digital Wallets
 
 Cryptocurrencies are stored in digital and hardware based wallets.  You can generate your own or use hosted wallets where you own the key to gain access to the wallet's contents.
 
