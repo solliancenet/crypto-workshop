@@ -24,6 +24,14 @@ In this lab, you will review the tools that are needed to get started with block
 - Open a new browser tab to TODO
 - TODO
 
+## Remix
+
+https://remix.ethereum.org/#optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.7+commit.e28d00a7.js
+
+## Truffle Suite
+
+https://trufflesuite.com/
+
 ## Mnemonics
 
 https://iancoleman.io/bip39/

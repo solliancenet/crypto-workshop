@@ -4,6 +4,8 @@ function InstallCryptoTools()
 {
   npm install -g yarn
   npm install -g lerna
+  npm i chai -D
+  npm i mocha -D
   npm install --save-dev hardhat
   npm install --save-dev typechain
   npm install --save-dev ethers
