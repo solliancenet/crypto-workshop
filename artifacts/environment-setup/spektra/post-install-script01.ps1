@@ -2,6 +2,8 @@
 
 function InstallCryptoTools()
 {
+  npm install @openzeppelin/contracts
+  
   npm install -g yarn
   npm install -g lerna
   npm i chai -D
@@ -14,8 +16,7 @@ function InstallCryptoTools()
   npm install --save-dev prettier prettier-plugin-solidity
   npm install --save-dev solidity-coverage
   npm install -g truffle
-  npm install @openzeppelin/contracts
-
+  npm install -g embark
 }
 
 function DisableInternetExplorerESC
