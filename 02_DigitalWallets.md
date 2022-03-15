@@ -53,10 +53,35 @@ Cryptocurrencies are stored in digital and hardware based wallets.  You can gene
 - Select **Next**
 - Select **Confirm**
 
-## Exercise 2: Hardware Wallets
+## Exercise 2: Other Wallets
 
-TODO
+Explore the other popular wallets available for storing your coins and tokens.
 
-### Create seed phrases
+- Each wallet provider has varying features and functionality, some of them are focused on a single coin (like Bitcoin) and some are mobile device based only (such as Android and iOS).
 
-- TODO
+Software:
+
+- https://www.coinbase.com/wallet
+- https://electrum.org
+- https://wallet.mycelium.com/
+- https://www.exodus.com/
+
+Hardware:
+
+- [Ledger Nano X](https://secure.money.com/pr/sa58b80ad920?ap_referrer=https%3A%2F%2Fmoney.com%2Fbest-crypto-wallets%2F&apnavid=18f7b5267c3a4966fe7d0af61d1f8d24)
+- https://trezor.io/
+- https://shapeshift.com/keepkey
+
+### Exploring Seed Phrases
+
+Seed phrases are designed to keep your wallet secure and accessible.  There are different types of seed phrases and we explore each of them here.  These mnemonics include various different specs including:
+
+- [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki)
+- [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki)
+- [BIP44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki)
+- [BIP49](https://github.com/bitcoin/bips/blob/master/bip-0049.mediawiki)
+- [BIP84](https://github.com/bitcoin/bips/blob/master/bip-0084.mediawiki)
+- [BIP141](https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki)
+
+- You can explore these using the [Mnemonic Code Converter](https://iancoleman.io/bip39/) tool by Ian Coleman to generate the various types of wallets and codes.
+  
