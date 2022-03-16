@@ -13,3 +13,7 @@ TODO
 ## Exercise 3: Exploring Polygon
 
 TODO
+
+## Exercise 3: Exploring Avalanche
+
+TODO

@@ -1,4 +1,4 @@
-# 04 / Exploring Token Types
+# 04 / Exploring Token Types + Smart Contracts
 
 TODO
 
