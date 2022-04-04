@@ -85,3 +85,7 @@ Seed phrases are designed to keep your wallet secure and accessible.  There are 
 
 - You can explore these using the [Mnemonic Code Converter](https://iancoleman.io/bip39/) tool by Ian Coleman to generate the various types of wallets and codes.
   
+
+### Dealing with Wallets (Transfers)
+
+TODO
