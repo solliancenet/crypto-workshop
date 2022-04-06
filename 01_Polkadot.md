@@ -2,8 +2,7 @@
 
 Duration: ~2 hours
 
-This lab will take you thru a server-side approach to working with the
-Polkadot blockchain.
+This lab will take you thru a server-side approach to working with the Polkadot blockchain.
 
 In this lab you will:
 

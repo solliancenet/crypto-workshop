@@ -34,6 +34,8 @@
 
 1. Navigate to the Lab URL
 
+    <https://gitpod.io/#https://github.com/figment-networks/learn-web3-dapp>
+
 2. When Gitpod first loads, it will appear something like this:
 
     ![Graphical user interface, application Description automatically generated](./images/media/image7.png)

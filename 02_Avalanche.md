@@ -58,7 +58,7 @@ In this lab you will:
     - Select **View key**
     - Copy the key
 
-6. When you have copied the key, you will to create a .env file in which to store it. Follow these steps:
+6. When you have copied the key, you will to create a `.env` file in which to store it. Follow these steps:
 
    1. Switch back to the gitpod.
 
@@ -86,7 +86,7 @@ In this lab you will:
 
     ![A picture containing scatter chart Description automatically generated](./images/media/image32.png)
 
-4. Select the navigation button **Generate a keypair** complete to continue.
+4. Select the navigation button **Create a keypair** complete to continue.
 
 ## Create a keypair
 
@@ -120,14 +120,14 @@ In this lab you will:
 
     ![Graphical user interface, text, application, chat or text message Description automatically generated](./images/media/image37.png)
 
-2. Open the View on transaction explorer link in a new browser tab and take moment to read the details of the transaction as it was captured in the blockchain.
+2. Open the **View on transaction explorer** link in a new browser tab and take moment to read the details of the transaction as it was captured in the blockchain.
 
     ![Graphical user interface, application Description automatically generated](./images/media/image38.png)
 
 3. Take a look at the value and compare it against the fee (labeled "Burned"). Also, observe how the UTXO transaction in this case yields
 two outputs. Can you explain why?
 
-4. Select the navigation button Export tokens from X-Chain to C-Chain to continue.
+4. Select the navigation button **Export tokens from X-Chain to C-Chain** to continue.
 
 ## Export tokens from X-Chain to C-Chain
 
@@ -135,16 +135,15 @@ two outputs. Can you explain why?
 
     ![Graphical user interface, text, application, chat or text message Description automatically generated](./images/media/image39.png)
 
-2. Select the navigation button Import tokens from X-Chain to C-Chain to continue.
+2. Select the navigation button **Import tokens from X-Chain to C-Chain** to continue.
 
 ## Import tokens from X-Chain to C-Chain
 
 1. Follow the instructions. When complete you should see something like:
 
-    ![Graphical user interface, text, application, chat or text message
-Description automatically generated](./images/media/image40.png)
+    ![Graphical user interface, text, application, chat or text message Description automatically generated](./images/media/image40.png)
 
-2. Open the View transaction on Avalanche Explorer link in a new browser tab and take moment to read the details of the transaction as it was captured in the blockchain.
+2. Open the **View transaction on Avalanche Explorer** link in a new browser tab and take moment to read the details of the transaction as it was captured in the blockchain.
 
     ![Graphical user interface, text, application Description automatically generated](./images/media/image41.png)
 

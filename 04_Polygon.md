@@ -16,7 +16,7 @@ In this lab you will:
 
 - ⛓ Deploy and interact with a Solidity smart contract
 
-1. With your Gitpod ready to use, within the Sample Browser tab, scroll down until you see the Chains listing.
+1. With your Gitpod ready to use, within the Sample Browser tab, scroll down until you see the **Chains** listing.
 
 2. Select **Polygon**.
 
@@ -24,12 +24,11 @@ In this lab you will:
 
 ## Welcome to the Polygon Pathway
 
-Read the overview instructions that appear for the Pathway. This first step does not require you to make any code changes, it's just an overview of the approach so you know what to expect.
+1. Read the overview instructions that appear for the Pathway. This first step does not require you to make any code changes, it's just an overview of the approach so you know what to expect.
 
-When you've finished reading the overview, look for a large navigation button labeled **Setup the Project** near the bottom right of the Sample
-Browser panel and select that.
+2. When you've finished reading the overview, look for a large navigation button labeled **Setup the Project** near the bottom right of the Sample Browser panel and select that.
 
-![Graphical user interface, text, application Description automatically generated](./images/media/image60.png)
+    ![Graphical user interface, text, application Description automatically generated](./images/media/image60.png)
 
 ## Setup the project
 
@@ -41,51 +40,52 @@ Browser panel and select that.
 
     ![Graphical user interface, text, application Description automatically generated](./images/media/image62.png)
 
-3. This should take to a page that detects your browser and prompts you to install the version appropriate to your browser. Select the "Install
-Metamask for \<Your Browser Name\>"
+3. This should take to a page that detects your browser and prompts you to install the version appropriate to your browser. Select the **Install
+Metamask for XYZ**
 
     ![Graphical user interface, text, application, chat or text message Description automatically generated](./images/media/image63.png)
 
-4. Follow the instructions after your download.
+4. Switch back to the gitpod window.
 
-5. Next you will need to get you DataHub API keys. In this step, right click the **Signup for DataHub** link and select to open that in new tab in
-your browser.
+5. Follow the instructions after your download.  Be sure that you add the **Mumbai** testnet to the Metamask wallet.
+
+6. Next you will need to get your DataHub API keys. In this step, right click the **Signup for DataHub** link and select to open that in new tab in your browser.
 
     ![Graphical user interface, text, application, chat or text message Description automatically generated](./images/media/image11.png)
 
-6. Switch to that tab and complete the registration for the free DataHub account.
+7. Switch to that tab and complete the registration for the free DataHub account.
 
     ![Graphical user interface, text, application, email Description automatically generated](./images/media/image12.png)
 
-7. Confirm your e-mail address.
+8. Confirm your e-mail address.
 
     ![Graphical user interface, text, application, email Description automatically generated](./images/media/image13.png)
 
     ![Graphical user interface, application, PowerPoint Description automatically generated](./images/media/image14.png)
 
-8. Login to Datahub with the credentials you created
+9. Login to Datahub with the credentials you created
 
     ![Graphical user interface, text, website Description automatically generated](./images/media/image15.png)
 
-9. Return to the Gitpod environment and follow the instructions for acquiring a DataHub key and adding to your code.
+10. Return to the Gitpod environment and follow the instructions for acquiring a DataHub key and adding to your code.
 
-10. Be sure to select Polygon as the protocol when creating your app in DataHub!
+11. Be sure to select **Polygon** as the protocol when creating your app in DataHub!
 
-11. When you have copied the key, you will need to create a .env.local file in which to store it. Follow these steps:
+12. When you have copied the key, you will need to create a `.env` file in which to store it. Follow these steps:
 
-    1. From the left treeview of the Gitpod environment under the root folder /learn-web3-dapp locate the file .env.example.
+    1. From the left treeview of the Gitpod environment under the root folder /learn-web3-dapp locate the file `.env.example`.
 
-    2. Right click the file and select Rename. Change the name to just .env.local
+    2. Right click the file and select **Rename**. Change the name to just `.env`
 
-    3. Double click the .env file to open it in a new editor panel.
+    3. Double click the `.env` file to open it in a new editor panel.
 
     ![Graphical user interface, application Description automatically generated](./images/media/image16.png)
 
-12. Paste your key as instructed and close the .env.local tab.
+13. Paste your key as the value for the `DATAHUB_POLYGON_API_KEY` variable then close the `env` tab.
 
     > NOTE: Whenever the instructions tell you edit code, look for the code file in the Explorer tree view just as you did for the .env.example file.
 
-13. Select the navigation button Connect to Polygon to continue.
+14. Select the navigation button **Connect to Polygon** to continue.
 
 ## Connect to Polygon
 
