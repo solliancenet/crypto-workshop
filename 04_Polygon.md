@@ -47,7 +47,7 @@ Metamask for XYZ**
 
 4. Switch back to the gitpod window.
 
-5. Follow the instructions after your download.  Be sure that you add the **Mumbai** testnet to the Metamask wallet.
+5. Follow the instructions after your download.  Be sure that you add the **Mumbai testnet** to the Metamask wallet.
 
 6. Next you will need to get your DataHub API keys. In this step, right click the **Signup for DataHub** link and select to open that in new tab in your browser.
 
@@ -86,6 +86,8 @@ Metamask for XYZ**
     > NOTE: Whenever the instructions tell you edit code, look for the code file in the Explorer tree view just as you did for the .env.example file.
 
 14. Select the navigation button **Connect to Polygon** to continue.
+
+    > NOTE: You may need to re-open your metamask wallet to provide the permission access.
 
 ## Connect to Polygon
 
@@ -127,11 +129,11 @@ Metamask for XYZ**
 
 1. Follow the instructions. When prompted to install truffle, you can use bash from within GitPod. To do so follow these steps:
 
-   1. In the terminal area (bottom quarter of the GitPod UI), select the bash item.
+   1. In the terminal area (bottom quarter of the GitPod UI), select the bash item (if you do not have the `bash` window, select **+->Bash**).
 
         ![Graphical user interface, text Description automatically generated](./images/media/image69.png)
 
-   1. Next copy and paste the following command to install truffle using npm:
+   2. Next copy and paste the following command to install truffle using npm:
 
         ```javascript
         npm install -g truffle
@@ -139,13 +141,13 @@ Metamask for XYZ**
 
         ![](./images/media/image70.png)
 
-   2. Next run the following:
+   3. Next run the following:
 
         ```javascript
         cd contracts/polygon/SimpleStorage
         ```
 
-   3. Finally, run the following:
+   4. Finally, run the following:
 
         ```javascript
         yarn
@@ -166,65 +168,42 @@ window:
         truffle develop
         ```
 
-3. When you get to the section titled Deploy the smart contract, you'll want to make one change to the truffle configuration before following the instructions to deploy the smart contract to the Mumbai test network. You need to specify the gas price you are willing to pay for the deployment. If you do not set this value, you will get a long error that near the top indicates "transaction underpriced". Follow these steps:
+3. When you get to the section titled **Deploy the smart contract**, you'll want to make one change to the truffle configuration before following the instructions to deploy the smart contract to the Mumbai test network. You need to specify the gas price you are willing to pay for the deployment. If you do not set this value, you will get a long error that near the top indicates "transaction underpriced". Follow these steps:
 
-4. Open contracts `/polygon/SimpleStorage/truffle-config.js`
+   1. Open the `/contracts/polygon/SimpleStorage/truffle-config.js` file
 
-5. Scroll down into you see the configuration area for matic, and between the confirmation and timeoutBlocks keys, add a new key for gasPrice that is set for 35 gwei. Your addition should look similar to the following:
+   2. Scroll down into you see the configuration area for `matic`, and between the `confirmation` and `timeoutBlocks` keys, add a new key for `gasPrice` that is set for `35` gwei. Your addition should look similar to the following:
 
-```text
-     matic: {
+        ```json
+        matic: {
+            provider: () =>
+                new HDWalletProvider({
+                privateKeys: [privateKey],
+                providerOrUrl: `https://matic-mumbai.chainstacklabs.com`,
+                chainId: 80001,
+                }),
+            network_id: 80001,
+            confirmations: 2,
+            gasPrice: 35,
+            timeoutBlocks: 200,
+            skipDryRun: true,
+            chainId: 80001,
+            }
+        ```
 
-       provider: () =\>
+4. When you have migrated your smart contract, which causes the deployment to the Mumbai test network, the output will provide the smart contract address.
 
-         new HDWalletProvider({
+5. Copy the contract address value
 
-           // As per the documentation at
- https://github.com/trufflesuite/truffle/tree/develop/packages/dwallet-provider#general-usage
-
-           // \"If both mnemonic and private keys are provided, the
- mnemonic is used.\"
-
-           // Therefore, uncomment the following lines to use a
- mnemonic instead of a private key:
-
-           // mnemonic: {
-
-           //   phrase: mnemonic,
-
-           // },
-
-           privateKeys: \[privateKey\],
-
-           providerOrUrl: \`https://matic-mumbai.chainstacklabs.com\`,
-
-           chainId: 80001,
-
-         }),
-
-       network_id: 80001,
-
-       confirmations: 2,
-
- **      gasPrice: 35000000000,**
-
-       timeoutBlocks: 200,
-
-       skipDryRun: true,
-
-       chainId: 80001,
-
-     },
-```
-
-When you have migrated your smart contract, which causes the deployment to the Mumbai test network, the output will provide the smart contract
-address. Copy that value, paste it into the contact address textbox and select Check deployment. Success should look similar to the following:
+6. Paste it into the contact address textbox and select **Check deployment**. Success should look similar to the following:
 
     ![Graphical user interface, text application, email Description automatically generated](./images/media/image72.png)
 
-Example address: 0x11ef085603162a59AB28CA66A59da6E9b8eC28Fb
+    ```text
+    Example address: 0x11ef085603162a59AB28CA66A59da6E9b8eC28Fb
+    ```
 
-Select the navigation button **Set the storage of the contract** to continue.
+7. Select the navigation button **Set the storage of the contract** to continue.
 
 ## Set the storage of the contract
 
@@ -241,7 +220,7 @@ to the following:
 
     ![](./images/media/image74.png)
 
-2. Select the navigation button Restore your account to continue.
+2. Select the navigation button **Restore your account** to continue.
 
 ## Restore your account
 
