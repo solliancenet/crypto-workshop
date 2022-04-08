@@ -40,8 +40,8 @@
 
     ![Graphical user interface, application Description automatically generated](./images/media/image7.png)
 
-3. This layout can be a little restrictive on a small screen, so begin by adjusting the layout to give the Sample Browser some more real-estate.
+3. This layout can be a little restrictive on a small screen, so begin by adjusting the layout to give the **Simple Browser** some more real-estate.
 
-4. Drag the tab labeled Sample Browser to the left and drop it over the tab labeled **Get Started**. Now you should be able to see the browser content better (as shown in the figure). It's important because this is the view that you will use to interact with your code changes.
+4. Drag the tab labeled **Simple Browser** to the left and drop it over the tab labeled **Get Started**. Now you should be able to see the browser content better (as shown in the figure). It's important because this is the view that you will use to interact with your code changes.
 
     ![Graphical user interface, application Description automatically generated](./images/media/image8.png)
