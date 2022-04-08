@@ -29,7 +29,7 @@ open
 
 1. Read the overview instructions that appear for the Pathway. This first step does not require you to make any code changes, it's just an overview of the approach so you know what to expect.
 
-2. When you've finished reading the overview, look for a large navigation button labeled **Setup the Project** near the bottom right of the Sample Browser panel and select that.
+2. When you've finished reading the overview, look for a large navigation button labeled **Setup the Project** near the bottom right of the **Simple Browser** panel and select that.
 
     ![Graphical user interface, text, application, email Description automatically generated](./images/media/image10.png)
 

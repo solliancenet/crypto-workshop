@@ -26,7 +26,7 @@ In this lab you will:
 
 1. Read the overview instructions that appear for the Pathway. This first step does not require you to make any code changes, it's just an overview of the approach so you know what to expect.
 
-2. When you've finished reading the overview, look for a large navigation button labeled **Setup the Project** near the bottom right of the Sample Browser panel and select that.
+2. When you've finished reading the overview, look for a large navigation button labeled **Setup the Project** near the bottom right of the **Simple Browser** panel and select that.
 
     ![Graphical user interface, text, application Description automatically generated](./images/media/image60.png)
 
@@ -49,7 +49,7 @@ Metamask for XYZ**
 
 5. Follow the instructions after your download.  Be sure that you add the **Mumbai testnet** to the Metamask wallet.
 
-6. Next you will need to get your DataHub API keys. In this step, right click the **Signup for DataHub** link and select to open that in new tab in your browser.
+6. Next you will need to get your DataHub API keys. In this step, right click the **Signup for DataHub** [link](https://datahub.figment.io/signup) and select to open that in new tab in your browser.
 
     ![Graphical user interface, text, application, chat or text message Description automatically generated](./images/media/image11.png)
 

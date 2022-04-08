@@ -14,7 +14,7 @@ In this lab you will:
 
 - ⛓ Deploy and interact with a Solana program (aka Smart Contract), written in Rust
 
-1. With your Gitpod ready to use, within the Sample Browser tab, scroll down until you see the Chains listing.
+1. With your Gitpod ready to use, within the **Simple Browser** tab, scroll down until you see the Chains listing.
 
 2. Select **Solana**.
 
@@ -24,7 +24,7 @@ In this lab you will:
 
 1. Read the overview instructions that appear for the Pathway. This first step does not require you to make any code changes, it's just an overview of the approach so you know what to expect.
 
-2. When you've finished reading the overview, look for a large navigation button labeled **Setup the Project** near the bottom right of the Sample Browser panel and select that.
+2. When you've finished reading the overview, look for a large navigation button labeled **Setup the Project** near the bottom right of the **Simple Browser** panel and select that.
 
     ![](./images/media/image42.png)
 
@@ -32,7 +32,7 @@ In this lab you will:
 
 1. The first thing you need to do in this step is to install the Solana CLI. To install the CLI into your GitPod instance, follow these steps:
 
-   1. Near the bottom right of the Sample Browser panel, at the top of the terminal panel, select the **+** button and then select **bash** to create a new bash shell instance.
+   1. Near the bottom right of the **Simple Browser** panel, at the top of the terminal panel, select the **+** button and then select **bash** to create a new bash shell instance.
 
         ![Graphical user interface, application Description automatically generated](./images/media/image43.png)
 
@@ -70,7 +70,7 @@ In this lab you will:
 
     ![](./images/media/image47.png)
 
-7. Next you will need to get you DataHub API keys. In this step, right click the **Signup for DataHub account** link and select to open that in new tab in your browser.
+7. Next you will need to get you DataHub API keys. In this step, right click the **Signup for DataHub account** [link](https://datahub.figment.io/signup) and select to open that in new tab in your browser.
 
     ![Graphical user interface, text, application, chat or text message Description automatically generated](./images/media/image11.png)
 

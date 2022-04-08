@@ -14,7 +14,7 @@ In this lab you will:
 
 ♻️ Import and Export tokens between chains
 
-1. With your Gitpod ready to use (you may need to select `Pathways`), within the Sample Browser tab, scroll down until you see the Chains listing.
+1. With your Gitpod ready to use (you may need to select `Pathways`), within the **Simple Browser** tab, scroll down until you see the Chains listing.
 
 2. Select **Avalanche**.
 
@@ -24,7 +24,7 @@ In this lab you will:
 
 1. Read the overview instructions that appear for the Pathway. This first step does not require you to make any code changes, it's just an overview of the approach so you know what to expect.
 
-2. When you've finished reading the overview, look for a large navigation button labeled **Setup the project** near the bottom right of the Sample Browser panel and select that.
+2. When you've finished reading the overview, look for a large navigation button labeled **Setup the project** near the bottom right of the **Simple Browser** panel and select that.
 
     ![Graphical user interface, text, application, email Description automatically generated](./images/media/image31.png)
 
